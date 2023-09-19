@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--After Registr View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AfterRegistr" id="Y6W-OH-hqX" customClass="AfterRegistrView" customModule="storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы успешно зарегестрировались" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJE-MC-cUX">
+                                <rect key="frame" x="20" y="79" width="353" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.13488023690000001" green="0.88961198210000003" blue="0.96402624879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyl-3U-Cnn">
+                                <rect key="frame" x="159" y="177" width="75" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="dismisBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iRk-UE-lqf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.87846349300000004" green="1" blue="0.72657407259999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LJE-MC-cUX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="9GD-de-8sr"/>
+                            <constraint firstItem="fyl-3U-Cnn" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Ep6-z3-2n2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LJE-MC-cUX" secondAttribute="trailing" constant="20" id="Fh2-gk-mVQ"/>
+                            <constraint firstItem="LJE-MC-cUX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="aUz-w4-QAx"/>
+                            <constraint firstItem="fyl-3U-Cnn" firstAttribute="top" secondItem="LJE-MC-cUX" secondAttribute="bottom" constant="31" id="ayI-i2-HYX"/>
+                            <constraint firstItem="LJE-MC-cUX" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="tiq-EL-0iW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DismisButton" destination="fyl-3U-Cnn" id="149-96-Mrg"/>
+                        <outlet property="labelText" destination="LJE-MC-cUX" id="5qW-yd-rbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+</document>

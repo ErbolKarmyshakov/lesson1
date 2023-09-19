@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Agreement View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Agreement" id="Y6W-OH-hqX" customClass="AgreementView" customModule="storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nwy-sO-iDs">
+                                <rect key="frame" x="29" y="140" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qza-Vv-A2a">
+                                <rect key="frame" x="282" y="150" width="41" height="30"/>
+                                <menu key="menu" id="744-Ln-dch">
+                                    <children>
+                                        <command title="Item 1" id="5VS-IT-eOa"/>
+                                        <command title="Item 2" id="2ba-D3-g98"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="k6X-zK-VBS">
+                                <rect key="frame" x="35" y="243" width="179" height="30"/>
+                                <color key="tintColor" red="0.13488023690000001" green="0.88961198210000003" blue="0.96402624879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="pQA-tu-nXh"/>
+                                </constraints>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Rhh-4a-vaO">
+                                <rect key="frame" x="244" y="242" width="94" height="31"/>
+                            </stepper>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-Su-s4Q">
+                                <rect key="frame" x="0.0" y="314" width="393" height="120"/>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ep8-PT-onQ">
+                                <rect key="frame" x="0.0" y="556" width="393" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="zKS-9p-6na"/>
+                                </constraints>
+                            </pickerView>
+                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iei-6J-0P5">
+                                <rect key="frame" x="172" y="481" width="51" height="31"/>
+                                <color key="tintColor" red="0.13488023690000001" green="0.88961198210000003" blue="0.96402624879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.87846349300000004" green="1" blue="0.72657407259999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="iei-6J-0P5" firstAttribute="top" secondItem="QIK-Su-s4Q" secondAttribute="bottom" constant="47" id="0a1-iT-GIx"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="trailing" secondItem="ep8-PT-onQ" secondAttribute="trailing" id="6cs-pB-DSz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qza-Vv-A2a" secondAttribute="trailing" constant="70" id="7Qj-Dm-rvW"/>
+                            <constraint firstItem="k6X-zK-VBS" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0340376" id="EWc-Ic-XsB"/>
+                            <constraint firstItem="k6X-zK-VBS" firstAttribute="centerY" secondItem="Rhh-4a-vaO" secondAttribute="centerY" id="KZl-qI-CgJ"/>
+                            <constraint firstItem="ep8-PT-onQ" firstAttribute="top" secondItem="iei-6J-0P5" secondAttribute="bottom" constant="44" id="XDc-qI-Iqz"/>
+                            <constraint firstItem="k6X-zK-VBS" firstAttribute="top" secondItem="Nwy-sO-iDs" secondAttribute="bottom" constant="72" id="Zym-29-rSc"/>
+                            <constraint firstItem="ep8-PT-onQ" firstAttribute="top" secondItem="iei-6J-0P5" secondAttribute="bottom" constant="44" id="aoo-Z6-529"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.140845" id="c3G-vj-BFf"/>
+                            <constraint firstItem="Qza-Vv-A2a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="91" id="cbI-dQ-uVi"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="centerX" secondItem="iei-6J-0P5" secondAttribute="centerX" id="dO3-Gu-A8n"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="top" secondItem="k6X-zK-VBS" secondAttribute="bottom" constant="42" id="fpw-Xm-PWP"/>
+                            <constraint firstItem="iei-6J-0P5" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ftb-Nb-XdH"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="leading" secondItem="ep8-PT-onQ" secondAttribute="leading" id="her-Hd-T5e"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="kPb-5b-4xz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ep8-PT-onQ" secondAttribute="bottom" constant="37" id="lWr-On-wGq"/>
+                            <constraint firstItem="k6X-zK-VBS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="37" id="mLA-8l-Oud"/>
+                            <constraint firstItem="QIK-Su-s4Q" firstAttribute="top" secondItem="Rhh-4a-vaO" secondAttribute="bottom" constant="41" id="mVj-Kt-N5d"/>
+                            <constraint firstItem="Rhh-4a-vaO" firstAttribute="leading" secondItem="k6X-zK-VBS" secondAttribute="trailing" constant="32" id="n6m-qk-q92"/>
+                            <constraint firstItem="Nwy-sO-iDs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="29" id="vVP-fF-BCa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fifth" destination="QIK-Su-s4Q" id="5kS-mr-ZYB"/>
+                        <outlet property="first" destination="Nwy-sO-iDs" id="KWK-XZ-zy4"/>
+                        <outlet property="fourth" destination="Rhh-4a-vaO" id="z6B-2R-DF4"/>
+                        <outlet property="second" destination="Qza-Vv-A2a" id="5Ml-AR-vZP"/>
+                        <outlet property="seventh" destination="ep8-PT-onQ" id="0Uj-uu-GY1"/>
+                        <outlet property="six" destination="iei-6J-0P5" id="q50-sn-KIU"/>
+                        <outlet property="third" destination="k6X-zK-VBS" id="BOF-19-cMl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+</document>
